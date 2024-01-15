@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# ./manage/watch ./01*
+
+PRG=$1
+
+echo $PRG | entr -c bash -c "gcc $PRG && echo OK"
