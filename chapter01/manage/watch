@@ -4,4 +4,5 @@
 
 PRG=$1
 
-echo $PRG | entr -c bash -c "gcc $PRG && echo OK"
+# echo $PRG | entr -c bash -c "gcc $PRG && echo OK"
+echo $PRG | entr -c bash -c "gcc -Wall -Wextra -Wpedantic -Werror $PRG && echo OK"

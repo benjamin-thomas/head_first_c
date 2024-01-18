@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-/*
-  echo ./01_decks.c | entr -c bash -c 'gcc ./01_decks.c && ./a.out'
-*/
 int main(void) {
   int decks;
   puts("Enter a number of decks");

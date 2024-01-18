@@ -1,7 +1,3 @@
-/*
-echo ./02_code_magnets.c | entr -c bash -c 'gcc ./02_code_magnets.c && ./a.out'
-echo ./02_code_magnets.c | entr -c bash -c 'gcc ./02_code_magnets.c && echo OK'
-*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,6 +19,11 @@ int main(void) {
     // converts text to a number (max=99 given the char[] size contraint)
     val = atoi(card_name);
   }
-  printf("The card value is: %i\n", val);
+
+  if (val >= 3 && val <= 6) {
+    puts("Count has gone up");
+  } else if (val == 10) {
+    puts("Count has gone down");
+  }
   return 0;
 }
