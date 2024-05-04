@@ -3,6 +3,7 @@
 # Usage:
 #   ./manage/watch ./chapter01/01*
 
+# apt install clang-tidy cppcheck-gui
 PRG=$1
 
-echo $PRG | entr -c bash -c "gcc -o /tmp/tmp -Wall -Wextra -Wpedantic -Werror -g $PRG && echo OK"
+echo $PRG | entr -c bash -c "./manage/compile $PRG"

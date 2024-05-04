@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void simple() {
+void simple(void) {
   char name[40];
   printf("Enter your name: ");
   scanf("%39s", name); // up to 39 chars + \0
@@ -12,7 +12,7 @@ void simple() {
   printf("Hello, %s! You are %d years old :)\n", name, age);
 }
 
-void multiple_strings() {
+void multiple_strings(void) {
   // We can also enter multiple items at a time
   char first_name[20];
   char last_name[20];
@@ -22,7 +22,7 @@ void multiple_strings() {
   printf("Your full name is: %s %s\n", first_name, last_name);
 }
 
-void safer_with_fgets() {
+void safer_with_fgets(void) {
   /* If we forget to limit the input length with `scanf`, we run the risk of
    * getting a buffer overflow (we read too far), which may many manifest
    * itself as a `segmentation fault`, or other kind of crashes.
@@ -50,7 +50,7 @@ void safer_with_fgets() {
   // length of the input. Don't use it.
 }
 
-int main() {
+int main(void) {
   // simple();
   // multiple_strings();
   safer_with_fgets();

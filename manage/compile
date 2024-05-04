@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+PRG=$1
+
+# `bear` is required by clang-tidy
+echo "==> Compiling: $PRG"
+bear -- gcc -o /tmp/tmp -Wall -Wextra -Wpedantic -Werror -g "$PRG"
+
+echo "==> Running clang-tidy..."
+clang-tidy "$PRG"
+
+echo "==> Running cppcheck..."
+cppcheck $PRG
+
+echo "OK"
