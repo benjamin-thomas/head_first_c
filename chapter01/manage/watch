@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# ./manage/watch ./01*
-
-PRG=$1
-
-# echo $PRG | entr -c bash -c "gcc $PRG && echo OK"
-echo $PRG | entr -c bash -c "gcc -Wall -Wextra -Wpedantic -Werror -g $PRG && echo OK"
