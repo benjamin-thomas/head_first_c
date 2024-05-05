@@ -42,7 +42,7 @@ int main(void) {
   char search_term[MAX_TRACK_LENGTH];
   int found;
 
-  // 1) Ask the user which track too look for
+  // 1) Ask the user which track to look for
   ask_user(search_term);
 
   // 2) Search for the track
